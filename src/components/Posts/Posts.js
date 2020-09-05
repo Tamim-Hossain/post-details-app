@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PostDetails from '../PostDetails/PostDetails';
+import { Grid, Container } from '@material-ui/core';
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -9,11 +10,13 @@ const Posts = () => {
             .then(data => setPosts(data))
     }, [])
     return (
-        <div>
-            {
-                posts.map(post => <PostDetails post={post} key={post.id}/>)
-            }
-        </div>
+        <Container fixed>
+            <Grid container item xs={12} spacing={3} justify="center">
+                {
+                    posts.map(post => <PostDetails post={post} key={post.id} />)
+                }
+            </Grid>
+        </Container>
     );
 };
 

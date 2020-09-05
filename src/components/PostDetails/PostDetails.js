@@ -7,15 +7,16 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { Link } from 'react-router-dom';
 
 const PostDetails = ({ post }) => {
-    const { id, title, body } = post;
+    const { title, body, id } = post;
     const useStyles = makeStyles({
         root: {
             maxWidth: 345,
         },
         media: {
-            height: 140,
+            height: 200,
         },
     });
     const classes = useStyles();
@@ -24,12 +25,12 @@ const PostDetails = ({ post }) => {
         <Card className={classes.root}>
             <CardActionArea>
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">{id}. {title}</Typography>
+                    <Typography gutterBottom variant="h5" color="primary" component="h2">{title}</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">{body}...</Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" variant="outlined" color="primary">Full Story<ArrowRightIcon /></Button>
+                <Button component={Link} to={`/posts/${id}`} size="small" variant="outlined" color="primary">Full Story<ArrowRightIcon /></Button>
             </CardActions>
         </Card>
     );
