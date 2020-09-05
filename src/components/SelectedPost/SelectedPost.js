@@ -16,7 +16,7 @@ const SelectedPost = ({ selectedPost }) => {
         <Card className={classes.root}>
             <CardActionArea>
                 <CardContent>
-                    <Typography variant="body2" component="small" color="textSecondary"><Box display="flex" justifyContent="space-between" ><span>User ID: {userId}</span><span>Post ID: {id}</span></Box></Typography>
+                    <Typography variant="body2" component="small" color="textSecondary"><Box display="flex" justifyContent="space-between" ><span>User ID: {userId}</span><span>Index: {id}</span></Box></Typography>
                     <hr/>
                     <Typography gutterBottom variant="h4" component="h2">{title}</Typography>
                     <Typography variant="body1" color="textSecondary" component="p">{body}</Typography>

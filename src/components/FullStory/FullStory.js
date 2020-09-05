@@ -4,13 +4,13 @@ import SelectedPost from '../SelectedPost/SelectedPost';
 import { Container } from '@material-ui/core';
 
 const FullStory = () => {
-    const { postId } = useParams();
+    let { postId } = useParams();
     const [selectedPost, setSelectedPost] = useState({})
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
             .then(response => response.json())
             .then(data => setSelectedPost(data))
-    }, [])
+    })
     return (
         <Container maxWidth="sm">
             <SelectedPost selectedPost={selectedPost} />
