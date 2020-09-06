@@ -10,7 +10,7 @@ const Posts = () => {
             .then(data => setPosts(data))
     }, [])
     return (
-        <Container fixed m={3}>
+            <Container fixed>
             <Grid container item xs={12} spacing={3} justify="center">
                 {
                     posts.map(post => <PostDetails post={post} key={post.id} />)
