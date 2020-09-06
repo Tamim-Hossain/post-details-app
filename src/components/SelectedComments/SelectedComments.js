@@ -11,8 +11,8 @@ const SelectedComments = ({ comment }) => {
                 </div>
                 <div className="col-md-10">
                     <small>User ID: {id}</small>
-                    <h6>Subject: {name}</h6>
                     <p>Email: {email}</p>
+                    <h6>Subject: {name}</h6>
                     <p>Comment: {body}</p>
                 </div>
             </div>
