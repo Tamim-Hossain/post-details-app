@@ -11,12 +11,12 @@ const Posts = () => {
     }, [])
     return (
             <Container fixed>
-            <Grid container item xs={12} spacing={3} justify="center">
-                {
-                    posts.map(post => <PostDetails post={post} key={post.id} />)
-                }
-            </Grid>
-        </Container>
+                <Grid container item xs={12} spacing={3} justify="center">
+                    {
+                        posts.map(post => <PostDetails post={post} key={post.id} />)
+                    }
+                </Grid>
+            </Container>
     );
 };
 

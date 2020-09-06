@@ -13,6 +13,7 @@ const SelectedPost = ({ selectedPost }) => {
             <div>
                 <h3>{title}</h3>
                 <p>{body}</p>
+                <hr/>
             </div>
         </div>
     );
